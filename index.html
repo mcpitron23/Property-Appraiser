@@ -3,188 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מאור כהן | ליווי אישי ושמאות רכוש מקצועית</title>
+    <title>מאור כהן | שמאות רכוש וניהול תביעות</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --gold: #c5a059;
-            --dark: #0a0a0a;
-            --accent: #1a1a1a;
+            --champagne: #c5a059;
+            --soft-gold: #b39359;
+            --off-white: #fafafa;
+            --deep-gray: #1a1a1a;
         }
 
         body {
             font-family: 'Assistant', sans-serif;
-            background-color: var(--dark);
-            color: #e5e5e5;
+            background-color: var(--off-white);
+            color: var(--deep-gray);
             line-height: 1.6;
         }
 
-        .serif {
-            font-family: 'Playfair Display', serif;
+        .serif-luxe {
+            font-family: 'Cormorant Garamond', serif;
         }
 
-        .gold-text {
-            color: var(--gold);
-            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .nav-blur {
-            background: rgba(10, 10, 10, 0.9);
+        .nav-fixed {
+            background: rgba(250, 250, 250, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
         .hero-gradient {
-            background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+            background: radial-gradient(circle at center, #ffffff 0%, #f3f3f3 100%);
         }
 
-        .btn-luxe {
-            border: 1px solid var(--gold);
-            padding: 1rem 2.5rem;
-            text-transform: uppercase;
+        .btn-black {
+            background: var(--deep-gray);
+            color: white;
+            padding: 1.2rem 3rem;
             letter-spacing: 2px;
-            font-weight: 700;
-            transition: all 0.4s ease;
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .btn-black:hover {
+            background: var(--soft-gold);
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(179, 147, 89, 0.2);
+        }
+
+        .card-minimal {
+            background: white;
+            border: 1px solid #eaeaea;
+            padding: 3.5rem 2.5rem;
+            transition: all 0.5s ease;
             position: relative;
             overflow: hidden;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
         }
 
-        .btn-luxe:hover {
-            background: var(--gold);
-            color: #000;
-            box-shadow: 0 0 20px rgba(197, 160, 89, 0.4);
+        .card-minimal:hover {
+            border-color: var(--champagne);
+            transform: translateY(-8px);
         }
 
-        .step-card {
-            background: #111;
-            padding: 2.5rem;
-            border-right: 2px solid var(--gold);
-            position: relative;
+        .gold-line {
+            width: 40px;
+            height: 1px;
+            background: var(--soft-gold);
+            margin-bottom: 1.5rem;
         }
 
-        .pattern-bg {
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c5a059' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2v-4h4v-2H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        .tag {
+            font-[600] text-[10px] uppercase tracking-[4px] text-zinc-400 mb-4 block;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 nav-blur px-6 md:px-20 py-6">
+    <!-- ניווט -->
+    <nav class="fixed top-0 w-full z-50 nav-fixed px-8 py-6">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex flex-col">
-                <span class="serif text-2xl font-bold tracking-tighter gold-text">MAOR COHEN</span>
-                <span class="text-[9px] tracking-[4px] uppercase opacity-50 font-bold">Your Personal Advocate</span>
+            <div class="flex flex-col leading-none">
+                <span class="serif-luxe text-2xl font-bold tracking-tight">MAOR COHEN</span>
+                <span class="text-[9px] uppercase tracking-[5px] text-[#b39359] mt-1 font-bold">Loss Adjuster</span>
             </div>
-            <a href="tel:0527882510" class="serif text-[#c5a059] font-bold text-lg md:text-xl transition-opacity hover:opacity-80">052.788.2510</a>
+            <div class="flex items-center gap-10">
+                <a href="tel:0527882510" class="text-sm font-bold tracking-widest hidden md:block border-b border-transparent hover:border-[#b39359] transition-all">052.788.2510</a>
+                <a href="https://wa.me/972527882510" class="text-[10px] font-bold uppercase tracking-widest bg-zinc-900 text-white px-6 py-3 rounded-sm">התייעצות מקצועית</a>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center pt-20 hero-gradient pattern-bg">
-        <div class="relative z-10 text-center px-6 max-w-5xl">
-            <h3 class="text-[#c5a059] text-xs md:text-sm tracking-[10px] uppercase font-bold mb-8">Professional Claims Partnership</h3>
-            <h1 class="serif text-5xl md:text-[90px] font-bold leading-tight mb-10">
-                ליווי מקצועי, <br>
-                <span class="gold-text italic">צעד אחר צעד.</span>
-            </h1>
-            <p class="text-zinc-400 text-xl md:text-2xl font-light mb-12 max-w-3xl mx-auto leading-relaxed">
-                אני מאור כהן, ואני כאן כדי לוודא שחברת הביטוח תעמוד בהתחייבויות שלה כלפיך. בתוך חוסר הוודאות של הנזק, אני הכתובת המקצועית שמלווה אותך מהרגע הראשון ועד שהצדק נעשה.
-            </p>
-            
-            <a href="https://wa.me/972527882510?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%9E%D7%90%D7%95%D7%A8%2C%20%D7%90%D7%A0%D7%99%20%D7%A4%D7%95%D7%A0%D7%94%20%D7%90%D7%9C%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8.%20%D7%A7%D7%A8%D7%94%20%D7%9C%D7%99%20%D7%A0%D7%A6%D7%A7%20%D7%91%D7%A0%D7%9B%D7%A1%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%99%D7%99%D7%A2%D7%95%D7%A5%20%D7%95%D7%9C%D7%99%D7%93%20%D7%9E%D7%A7%D7%A6%D7%95%D7%A2%D7%99%20%D7%91%D7%A0%D7%95%D7%A9%D7%90." 
-               class="btn-luxe">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                פנייה ישירה למאור
-            </a>
-        </div>
-    </section>
-
-    <!-- The Journey Section -->
-    <section class="py-32 px-6 bg-[#050505]">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-20">
-                <p class="text-[#c5a059] uppercase tracking-[5px] text-xs font-bold mb-4">The Process</p>
-                <h2 class="serif text-5xl font-bold italic">מעטפת ניהול מלאה</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="step-card">
-                    <span class="gold-text serif text-3xl font-bold block mb-4">01</span>
-                    <h4 class="text-xl font-bold mb-3">תיעוד הזירה</h4>
-                    <p class="text-zinc-500 text-sm leading-relaxed">הגעה מיידית לשטח ותיעוד הנדסי קפדני של הנזקים לפני תחילת העבודות.</p>
-                </div>
-                <div class="step-card">
-                    <span class="gold-text serif text-3xl font-bold block mb-4">02</span>
-                    <h4 class="text-xl font-bold mb-3">דו"ח שמאות</h4>
-                    <p class="text-zinc-500 text-sm leading-relaxed">גיבוש הערכת נזק מקיפה הכוללת נזקי מבנה ותכולה בהתאם לפוליסה.</p>
-                </div>
-                <div class="step-card">
-                    <span class="gold-text serif text-3xl font-bold block mb-4">03</span>
-                    <h4 class="text-xl font-bold mb-3">ניהול התביעה</h4>
-                    <p class="text-zinc-500 text-sm leading-relaxed">ייצוג מול חברת הביטוח וניהול משא ומתן עיקש להשגת המקסימום המגיע לך.</p>
-                </div>
-                <div class="step-card">
-                    <span class="gold-text serif text-3xl font-bold block mb-4">04</span>
-                    <h4 class="text-xl font-bold mb-3">ליווי עד הפיצוי</h4>
-                    <p class="text-zinc-500 text-sm leading-relaxed">פיקוח על תהליך התשלום עד להפקדה המלאה וסגירה מוחלטת של התיק.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Support Element -->
-    <section class="py-32 px-6 pattern-bg border-y border-zinc-900">
+    <section class="min-h-screen flex items-center justify-center hero-gradient px-6 pt-20">
         <div class="max-w-4xl mx-auto text-center">
-            <div class="flex justify-center mb-10">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#c5a059" stroke-width="1">
-                    <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-            </div>
-            <h3 class="serif text-4xl font-bold mb-8">הגנה מקצועית למבוטחים</h3>
-            <p class="text-zinc-300 text-xl font-light leading-relaxed max-w-2xl mx-auto mb-6">
-                חברת הביטוח דואגת לאינטרסים שלה. אני כאן כדי להבטיח שאתה תקבל את מה שמגיע לך. הליווי שלי הוא אישי, סמכותי וחסר פשרות. 
+            <span class="text-[11px] uppercase tracking-[6px] text-[#b39359] font-bold mb-8 block">Independent Property Adjusting</span>
+            <h1 class="serif-luxe text-5xl md:text-8xl font-medium mb-10 leading-tight text-zinc-900">
+                הערכה מדויקת. <br>
+                <span class="italic text-[#b39359]">ליווי ללא פשרות.</span>
+            </h1>
+            <p class="text-zinc-500 text-lg md:text-xl font-light mb-14 max-w-2xl mx-auto leading-relaxed">
+                ניהול תביעות רכוש בסטנדרט מקצועי מחמיר. אני כאן כדי להבטיח שכל נזק יתועד, יוערך ויוצג בצורה המקצועית ביותר מול חברת הביטוח.
             </p>
-            <p class="text-zinc-500 text-lg">כשאתה בוחר בי, אתה מקבל שקט נפשי ושותף מקצועי שמבין את המערכת ופועל רק עבורך.</p>
-        </div>
-    </section>
-
-    <!-- Final Call to Action -->
-    <section class="py-40 px-6 bg-black text-center relative overflow-hidden">
-        <div class="max-w-4xl mx-auto relative z-10">
-            <h2 class="serif text-5xl md:text-7xl font-bold mb-8 italic italic">נעבור את זה <span class="gold-text">ביחד.</span></h2>
-            <p class="text-zinc-400 text-xl mb-16 font-light max-w-xl mx-auto">
-                לתיאום פגישה מקצועית ובדיקת סטטוס התביעה שלכם, צרו קשר ישיר.
-            </p>
-            
-            <a href="https://wa.me/972527882510?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%9E%D7%90%D7%95%D7%A8%2C%20%D7%90%D7%A0%D7%99%20%D7%A4%D7%95%D7%A0%D7%94%20%D7%90%D7%9C%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8.%20%D7%A7%D7%A8%D7%94%20%D7%9C%D7%99%20%D7%A0%D7%A6%D7%A7%20%D7%91%D7%A0%D7%9B%D7%A1%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%99%D7%99%D7%A2%D7%95%D7%A5%20%D7%95%D7%9C%D7%99%D7%93%20%D7%9E%D7%A7%D7%A6%D7%95%D7%A2%D7%99%20%D7%91%D7%A0%D7%95%D7%A9%D7%90." 
-               class="btn-luxe px-20 py-8 text-lg">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="inline-block ml-2"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                פתיחת פנייה דחופה
-            </a>
-            
-            <div class="mt-20">
-                <span class="serif text-3xl gold-text font-bold tracking-widest transition-opacity hover:opacity-80">
-                    <a href="tel:0527882510">052-7882510</a>
-                </span>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="https://wa.me/972527882510" class="btn-black">
+                    פתיחת פנייה לבירור נזק
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-10 border-t border-zinc-900 bg-black px-6 text-center">
-        <p class="text-zinc-700 text-[10px] uppercase tracking-[4px]">
-            &copy; 2024 MAOR COHEN | EXCLUSIVE LOSS ADJUSTING & RECOVERY
+    <!-- Services Grid -->
+    <section class="py-32 bg-white px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-24">
+                <h2 class="serif-luxe text-4xl md:text-5xl font-bold">התמחויות מקצועיות</h2>
+                <div class="w-20 h-1 bg-[#b39359] mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- נזקי מים -->
+                <div class="card-minimal">
+                    <div class="gold-line"></div>
+                    <h3 class="text-xl font-bold mb-4">נזקי מים</h3>
+                    <p class="text-sm text-zinc-500 font-light leading-relaxed">
+                        ניתוח הנדסי של כשלי צנרת, רטיבות כלואה ומיפוי נזקי מבנה מקיפים לצורך הגשת דוח שמאות מפורט.
+                    </p>
+                </div>
+
+                <!-- נזקי אש -->
+                <div class="card-minimal">
+                    <div class="gold-line"></div>
+                    <h3 class="text-xl font-bold mb-4">נזקי אש</h3>
+                    <p class="text-sm text-zinc-500 font-light leading-relaxed">
+                        הערכה יסודית של נזקי בעירה, עשן ופיח. אומדן שיקום מבנה ותכולה בהתאם לפוליסה הקיימת.
+                    </p>
+                </div>
+
+                <!-- פריצה -->
+                <div class="card-minimal">
+                    <div class="gold-line"></div>
+                    <h3 class="text-xl font-bold mb-4">פריצה וזדון</h3>
+                    <p class="text-sm text-zinc-500 font-light leading-relaxed">
+                        תיעוד והערכת שווי לרכוש ודברי ערך, לצד אומדן נזקים למעטפת הנכס ולמערכות המיגון.
+                    </p>
+                </div>
+
+                <!-- נזקי טבע -->
+                <div class="card-minimal">
+                    <div class="gold-line"></div>
+                    <h3 class="text-xl font-bold mb-4">נזקי טבע</h3>
+                    <p class="text-sm text-zinc-500 font-light leading-relaxed">
+                        שמאות לנזקי סערה, חדירת מי גשמים ופגיעות רוח במבנה ובמעטפת הנכס בסטנדרט דיוק גבוה.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- הגישה המקצועית -->
+    <section class="py-32 bg-zinc-50">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+                <div>
+                    <span class="text-[10px] uppercase tracking-[4px] text-[#b39359] font-bold block mb-4">Methodology</span>
+                    <h2 class="serif-luxe text-4xl font-bold mb-8">דיוק בפרטים הקטנים</h2>
+                    <p class="text-zinc-500 font-light text-lg leading-relaxed mb-8">
+                        בעולם השמאות, דוח מקצועי הוא כזה שלא משאיר מקום לספק. אני ניגש לכל נזק בגישה יסודית, תוך שימוש במתודולוגיות עבודה עדכניות שנועדו להציג את התמונה המלאה לחברת הביטוח ולהבטיח מיצוי זכויות מקסימלי.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-sm font-bold">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#b39359]"></span>
+                            תיעוד ויזואלי והנדסי מקיף
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-bold">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#b39359]"></span>
+                            ניתוח סעיפי פוליסה בהתאמה לנזק
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-bold">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#b39359]"></span>
+                            ליווי אישי וזמינות מלאה לאורך כל התהליך
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-12 border border-zinc-200 shadow-sm relative">
+                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-[#b39359]/10 rounded-full"></div>
+                    <h4 class="serif-luxe text-2xl italic mb-6">"המטרה שלי היא להפוך את ניהול התביעה לשקוף, מדויק והוגן עבור המבוטח."</h4>
+                    <span class="text-xs uppercase tracking-widest font-bold text-zinc-400">מאור כהן - שמאי רכוש</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-40 bg-white text-center px-6">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="serif-luxe text-4xl md:text-6xl font-bold mb-10">נמצא כאן עבורכם.</h2>
+            <p class="text-zinc-400 mb-16 text-lg font-light">פנו אלי לתיאום ביקור בנכס ובחינת הנזק.</p>
+            
+            <div class="flex flex-col md:flex-row gap-12 justify-center items-center">
+                <a href="tel:0527882510" class="text-3xl font-bold serif-luxe tracking-widest hover:text-[#b39359] transition-colors">
+                    052-7882510
+                </a>
+                <a href="https://wa.me/972527882510" class="btn-black">
+                    הודעה בוואטסאפ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- פוטר -->
+    <footer class="py-12 border-t border-zinc-100 bg-white text-center">
+        <p class="text-zinc-400 text-[9px] uppercase tracking-[6px] font-bold">
+            Maor Cohen | Claims Management & Loss Adjusting
         </p>
     </footer>
 
 </body>
 </html>
-
